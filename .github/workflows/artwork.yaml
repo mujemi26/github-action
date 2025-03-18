@@ -1,0 +1,24 @@
+name: Artwork Workflow
+on: [push]
+
+jobs:
+    first_job:
+        runs-on: ubuntu-latest
+        steps:          
+            - name: Checkout code
+              uses: actions/checkout@v4 
+
+            - name: Multiple Commands
+              run: |
+                echo "Hello, world!"
+                ls -la
+                cat README.md
+             
+            - name: Generate ASCII Artwork
+              run: |
+                echo "  _____ _          _ _"
+                echo " / ____| |        | | |"
+                echo "| |    | |__   ___| | | ___"
+                echo "| |    | '_ \\ / _ \\ | |/ _ \\"
+                echo "| |____| | | |  __/ | |  __/"
+                echo " \\_____|_| |_|\\___|_|_|\\___|"
